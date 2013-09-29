@@ -1,0 +1,15 @@
+body {
+    padding-top: 50px;
+}
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.form-admin form.form-horizontal {
+    margin-top: 25px;
+}
+
+.pagination {
+    margin: 0;
+}
