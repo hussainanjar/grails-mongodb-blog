@@ -25,9 +25,9 @@ class AdminPageController {
     def save() {
         def pageInstance
         if (params.id) {
-            pageInstance = Page.get(params.long('id'))
+            pageInstance = Page.get(params.id)
             if (!pageInstance) {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'page.label', default: 'Page'), id])
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'page.label', default: 'Page'), params.id])
                 redirect(action: "list")
                 return
             }
