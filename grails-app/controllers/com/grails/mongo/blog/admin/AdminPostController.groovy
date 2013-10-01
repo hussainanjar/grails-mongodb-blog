@@ -7,6 +7,8 @@ class AdminPostController {
 
     static allowedMethods = [save: "POST", delete: "POST    "]
 
+    def springSecurityService
+
     def index() {
         forward(action: "list")
     }
@@ -35,7 +37,7 @@ class AdminPostController {
             }
         } else {
             postInstance = new Post()
-            postInstance.author = 'admin' //TODO: should be from session
+            postInstance.author = springSecurityService.getCurrentUser().username
         }
         postInstance.properties = params
         postInstance.tagList = params.tagList
