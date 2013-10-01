@@ -28,6 +28,7 @@ class AdminPostController {
 
     def save() {
         def postInstance
+        String successMsg
         if (params.id) {
             postInstance = Post.get(params.id)
             if (!postInstance) {
@@ -35,9 +36,11 @@ class AdminPostController {
                 redirect(action: "list")
                 return
             }
+            successMsg = message(code: 'default.simple.updated.message', args: [message(code: 'post.label', default: 'Post')])
         } else {
             postInstance = new Post()
             postInstance.author = springSecurityService.getCurrentUser().username
+            successMsg = message(code: 'default.simple.created.message', args: [message(code: 'post.label', default: 'Post')])
         }
         postInstance.properties = params
         postInstance.tagList = params.tagList
@@ -46,7 +49,7 @@ class AdminPostController {
             return
         }
 
-        flash.message = message(code: 'default.simple.created.message', args: [message(code: 'post.label', default: 'Post')])
+        flash.message = successMsg
         redirect(action: "list")
     }
 

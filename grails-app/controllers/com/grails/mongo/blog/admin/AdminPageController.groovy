@@ -24,6 +24,7 @@ class AdminPageController {
 
     def save() {
         def pageInstance
+        String successMsg
         if (params.id) {
             pageInstance = Page.get(params.id)
             if (!pageInstance) {
@@ -31,8 +32,10 @@ class AdminPageController {
                 redirect(action: "list")
                 return
             }
+            successMsg = message(code: 'default.simple.updated.message', args: [message(code: 'page.label', default: 'Page')])
         } else {
             pageInstance = new Page()
+            successMsg = message(code: 'default.simple.created.message', args: [message(code: 'page.label', default: 'Page')])
         }
         pageInstance.properties = params
         if (!pageInstance.save()) {
@@ -40,7 +43,7 @@ class AdminPageController {
             return
         }
 
-        flash.message = message(code: 'default.simple.created.message', args: [message(code: 'page.label', default: 'Page')])
+        flash.message = successMsg
         redirect(action: "list")
     }
 
