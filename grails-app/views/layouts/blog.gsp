@@ -5,8 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Blog using grails and mongo db">
+    <meta name="author" content="Hussain Fakhruddin">
+    <meta name="keywords" content="grails, mongo-db, mongo, mongodb, blog">
     <link href='http://fonts.googleapis.com/css?family=Arbutus+Slab' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="${g.resource(dir: 'blog/images', file: 'favicon.ico')}">
 
