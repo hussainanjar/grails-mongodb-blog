@@ -122,3 +122,5 @@ grails.plugins.springsecurity.interceptUrlMap = [
         '/login/**':     ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/logout/**':    ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
+
+blog.github.link='https://github.com/hussainanjar/grails-mongodb-blog'
