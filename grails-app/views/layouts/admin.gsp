@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="shortcut icon" href="${g.resource(dir: 'admin/images', file: 'favicon.ico')}">
 
     <title>Admin - <g:layoutTitle /></title>
     <r:require modules="jquery"/>

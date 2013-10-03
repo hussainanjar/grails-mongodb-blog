@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href='http://fonts.googleapis.com/css?family=Arbutus+Slab' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="shortcut icon" href="${g.resource(dir: 'blog/images', file: 'favicon.ico')}">
 
     <title><g:layoutTitle default="${meta(name:'app.name')}" /></title>
 
