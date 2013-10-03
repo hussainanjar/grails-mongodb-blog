@@ -35,7 +35,7 @@ class PostsController {
     }
 
     def tags(String tag) {
-        def posts = Post.findAllByTagsAndActive(tag,true)
+        def posts = Post.collection.find(tags: tag, active: true)
         render(view: "/blog/posts/index", model: [posts: posts])
     }
 
