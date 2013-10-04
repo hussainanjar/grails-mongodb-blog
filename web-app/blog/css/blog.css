@@ -110,12 +110,12 @@ article.post-list header figure {
 
 
 article.post-list div.post-list-content {
-    width: 660px;
+    max-width: 660px;
     margin: 0 auto;
 }
 
 article.post-list footer {
-    width: 660px;
+    max-width: 660px;
     margin: 0 auto;
 }
 
@@ -138,4 +138,34 @@ nav.posts-pagination a.prevLink{
     font-size: 18px;
     text-decoration: none;
     margin: 0.2em;
+}
+
+.navbar-default {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.pills > li > a {
+    border-radius: 5px;
+}
+
+.pills > li.active > a, .pills > li.active > a:hover, .pills > li.active > a:focus {
+    background-color: #428BCA !important;
+    color: #fff !important;
+}
+
+.pills > li > a:hover, .nav > li > a:focus {
+    background-color: #eee !important;
+}
+
+.pills > li > a {
+    padding: 10px 15px;
+}
+
+.pills > li + li {
+    margin-left: 2px;
+}
+
+.navbar-brand {
+    font-size: 23px;
 }
