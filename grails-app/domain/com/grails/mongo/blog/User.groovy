@@ -47,13 +47,22 @@ class User {
 
     def isAdmin() {
         def auths = getAuthorities()
-        boolean hasAdminRole = false
         auths.each { role ->
             if ('ROLE_ADMIN'.equals(role.authority.trim())) {
-                hasAdminRole =  true
+                return  true
             }
         }
-        return hasAdminRole
+        return false
+    }
+
+    def hasRole(String role) {
+        def auths = getAuthorities()
+        auths.each { rl ->
+            if(rl.authority.equals(role)) {
+                return true
+            }
+        }
+        return false
     }
 
 	protected void encodePassword() {

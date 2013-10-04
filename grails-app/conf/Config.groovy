@@ -114,7 +114,13 @@ grails.plugins.springsecurity.authority.className = 'com.grails.mongo.blog.Role'
 grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"
 
 grails.plugins.springsecurity.interceptUrlMap = [
-        '/admin/**':    ['ROLE_ADMIN'],
+        '/admin/post/save**':       ['ROLE_ADMIN'],
+        '/admin/post/delete**':     ['ROLE_ADMIN'],
+        '/admin/page/save**':       ['ROLE_ADMIN'],
+        '/admin/page/delete**':     ['ROLE_ADMIN'],
+        '/admin/user/update**':     ['ROLE_ADMIN'],
+        '/admin/settings/update**': ['ROLE_ADMIN'],
+        '/admin/**':     ['ROLE_ADMIN', 'ROLE_VISITOR'],
         '/js/**':        ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/css/**':       ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/images/**':    ['IS_AUTHENTICATED_ANONYMOUSLY'],

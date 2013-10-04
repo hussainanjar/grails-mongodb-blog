@@ -20,6 +20,20 @@ class BootStrap {
             UserRole.create(admin,role,true)
         }
 
+        def visitor = User.findByUsername("visitor") ?:
+            new User(username: "visitor",
+                    password: "visitor123",
+                    enabled: true, accountLocked: false,
+                    accountExpired: false, passwordExpired: false,
+                    email: 'visitor@domain.com', name: "Visitor").save();
+
+        if (visitor && !visitor.hasRole('ROlE_VISITOR')) {
+            Role role = Role.findByAuthority("ROLE_VISITOR") ?:
+                new Role(authority: "ROLE_VISITOR").save()
+
+            UserRole.create(visitor,role,true)
+        }
+
         BlogSetting setting = BlogSetting.get(BlogSetting.SETTINGS_ID) ?:
             new BlogSetting(blogTitle: "Grails MongoDB Blog",
                 postsPerPage: 5,
