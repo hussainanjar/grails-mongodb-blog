@@ -27,7 +27,7 @@ class BootStrap {
                     accountExpired: false, passwordExpired: false,
                     email: 'visitor@domain.com', name: "Visitor").save();
 
-        if (visitor && !visitor.hasRole('ROlE_VISITOR')) {
+        if (visitor && !visitor.hasRole('ROLE_VISITOR')) {
             Role role = Role.findByAuthority("ROLE_VISITOR") ?:
                 new Role(authority: "ROLE_VISITOR").save()
 
