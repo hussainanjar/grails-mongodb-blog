@@ -23,7 +23,7 @@ Following are the list of plugins used in this project.
 
 #Security Plugins
 
-  - Sprint Security 1.2.7.3
+  - Spring Security 1.2.7.3
 
 #Cloud Plugins
 
