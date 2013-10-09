@@ -18,7 +18,6 @@ Following are the list of plugins used in this project.
   - Jquery 1.8.3
   - Resources 1.2
   - Tomcat 2.2.4
-  - Database Migration 1.3.2
   - Cache 1.0.1
 
 #Security Plugins
