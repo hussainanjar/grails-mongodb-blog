@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.MongoDataIntegrityViolationException
 
 class AdminPostController {
 
-    static allowedMethods = [save: "POST", delete: "POST    "]
+    static allowedMethods = [save: "POST", delete: "POST"]
 
     def springSecurityService
 
